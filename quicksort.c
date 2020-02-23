@@ -1,4 +1,19 @@
-/* A simple Quicksort Program. Copyright 2020. Pratik Mullick and Richard W. Marinelli. Please read LICENSE.md for further details. */
+/* A simple Quicksort Program. Copyright 2019 2020. Pratik Mullick and Richard W. Marinelli. Please read LICENSE.md for further details. */
+
+/* 
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
 /* 
 algorithm quicksort(A, lo, hi) is
     if lo < hi then
@@ -16,8 +31,6 @@ algorithm partition(A, lo, hi) is
     swap A[i] with A[hi]
     return i
 */
-
-/* Read lines from stdin, sort the array with quicksort, print out to stdout */
 
 #include <string.h>
 #include <stdio.h>
@@ -56,6 +69,11 @@ static void quicksort(char **array, int low, int high)	{
 		quicksort(array, p + 1, high);
 		}
 	}
+
+
+
+// Read a line with getline. Getline returns the length (l). Use malloc to allocate (l+1) in memory. Copy **lineptr used in getline into the space. Add the pointer
+// to the next element in the array.  Read no more than 1000 lines.  Sort the array. Print out the results to stdout.
 
 int main(int argc, char **argv)	{
 	// Getline requirements
@@ -104,7 +122,6 @@ int main(int argc, char **argv)	{
 	}
 
 	// Getting data into the array.
-	// Issue: Only the first line is read.
 #if 1
 	while ((idx < 1000) && (getline(&lineptr, &length, stream) != -1))	{
 		array[idx] = malloc(length + 1);
@@ -128,7 +145,3 @@ int main(int argc, char **argv)	{
 
 	return 0;
 }
-
-	// Read a line with getline. Getline returns the length (l). Use malloc to allocate (l+1) in memory. Copy **lineptr used in getline into the space. Add the pointer
-	// to the next element in the array.  Read no more than 1000 lines.  Sort the array. Print out the results to stdout.
-
