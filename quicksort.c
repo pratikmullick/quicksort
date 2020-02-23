@@ -1,4 +1,5 @@
-/*
+/* A simple Quicksort Program. Copyright 2020. Pratik Mullick and Richard W. Marinelli. Please read LICENSE.md for further details. */
+/* 
 algorithm quicksort(A, lo, hi) is
     if lo < hi then
     	        p := partition(A, lo, hi)
